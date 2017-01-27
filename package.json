@@ -1,0 +1,16 @@
+{
+  "name": "irasutoya_letter_output",
+  "version": "1.0.0",
+  "description": "",
+  "main": "rewrite.js",
+  "dependencies": {},
+  "devDependencies": {
+    "hepburn": "^1.0.0",
+    "japanese": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pentamania",
+  "license": "ISC"
+}
