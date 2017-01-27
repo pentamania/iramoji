@@ -7,8 +7,6 @@
 
   // 空白用プロパティ
   var SPACE_PROP = {
-    // x: -1000,
-    // y: -1000,
     w: 84,
     h: 197
   };
@@ -42,7 +40,7 @@
     var atlas = assets[1];
     var input = document.getElementById('input');
     var canvas = document.getElementById('out-canvas');
-    var output = document.getElementById('out'); //DEBUG
+    var output = document.getElementById('out'); // DEBUG
     var letterMag = null;
     var letterMargin = null;
     var isVertical = true;
@@ -52,16 +50,16 @@
       var text = (input.value != "") ? input.value : " ";
       var l, currentPos;
       var letters = [];
-      var charCode = ""; //debug
+      var charCode = ""; // For debug
 
-      if (letterMag < 0) letterMag =  0.05;
+      if (letterMag < 0) letterMag = 0.05;
 
       // 前処理
       for (var i = 0; i < text.length; i++) {
         l = atlas[text.charAt(i)] || SPACE_PROP;
         // l = atlas[text.charCodeAt(i)] || SPACE_PROP;
 
-        // 濁点付きの「あ」など特殊な濁点文字
+        // 濁点付きの「あ」などの特殊な濁点文字
         if (text.charAt(i+1) === "゛"){
           ["あ","い","う","え","お","ア","イ","エ","オ"].forEach(function(a){
             if (text.charAt(i) === a){
@@ -94,18 +92,18 @@
       currentPos = 0;
       letters.forEach(function(l,i) {
         // IndexSizeError 対策： いらない？
-        // var destWidth = Math.max(1, l.w*letterMag);
-        // var destHeight = Math.max(1, l.h*letterMag);
+        // var destW = Math.max(1, l.w*letterMag);
+        // var destH = Math.max(1, l.h*letterMag);
 
-        var destWidth = l.w * letterMag;
-        var destHeight = l.h * letterMag;
+        var destW = l.w * letterMag;
+        var destH = l.h * letterMag;
 
         if (isVertical) {
-          if (l.x != null) ctx.drawImage(spritesheet, l.x, l.y, l.w, l.h, 0, currentPos+letterMargin*i, destWidth, destHeight);
-          currentPos += destHeight;
+          if (l.x != null) ctx.drawImage(spritesheet, l.x, l.y, l.w, l.h, 0, currentPos+letterMargin*i, destW, destH);
+          currentPos += destH;
         } else {
-          if (l.x != null) ctx.drawImage(spritesheet, l.x, l.y, l.w, l.h, currentPos+letterMargin*i, 0, destWidth, destHeight);
-          currentPos += destWidth;
+          if (l.x != null) ctx.drawImage(spritesheet, l.x, l.y, l.w, l.h, currentPos+letterMargin*i, 0, destW, destH);
+          currentPos += destW;
         }
 
         charCode += text.charCodeAt(i)+", ";
@@ -133,11 +131,12 @@
     changeState();
   };
 
-  window.addEventListener('DOMContentLoaded', function(){
+  window.addEventListener('DOMContentLoaded', function() {
     preload()
     .then(main)
     .catch(function(err) {
       console.error(err);
+      alert('ロードに失敗しました');
     });
   }, false);
 
