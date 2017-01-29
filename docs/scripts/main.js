@@ -4,6 +4,7 @@
   var SS_URL = "./assets/spritesheet.png";
   var ATLAS_URL = "./assets/atlas.json";
   var DEBUG_MODE = false;
+  var canvas;
 
   // 空白用プロパティ
   var SPACE_PROP = {
@@ -39,7 +40,6 @@
     var spritesheet = assets[0];
     var atlas = assets[1];
     var input = document.getElementById('input');
-    var canvas = document.getElementById('out-canvas');
     var output = document.getElementById('out'); // DEBUG
     var letterMag = null;
     var letterMargin = null;
@@ -132,6 +132,13 @@
   };
 
   window.addEventListener('DOMContentLoaded', function() {
+    canvas = document.getElementById('out-canvas');
+    var c = canvas.getContext('2d');
+    c.font = "20px 'meirio'";
+    c.textAlign = "center";
+    c.fillStyle = "#E4801E";
+    c.fillText("画像ロード中・・・", canvas.width/2, canvas.height/2, canvas.width);
+
     preload()
     .then(main)
     .catch(function(err) {

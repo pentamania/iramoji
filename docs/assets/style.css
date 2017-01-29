@@ -1,33 +1,37 @@
-*{
+ /* Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+--------------------------------------------------------------------------------------- */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+* {
     box-sizing: border-box;
 }
-html, body{
+html, body {
     background: #D7D4B5;
     /*background: #FEAE58;*/
     color: white;
     height: 100%;
 }
-.container{
+.container {
     text-align: center;
     font-size: 20px;
     margin: 0 auto;
     width: 100%;
     height: 100%;
 }
-header{
+header {
     background: #9C722F;
     padding: 1.4em;
     box-shadow: 0 1px 2px #8E744E;
 }
-.title{
-    font-size: 2.3em;
+.title {
+    font-size: 2em;
 }
-footer{
+footer {
     height: 10%;
     text-align: center;
     background: #9C722F;
 }
-.input-wrapper{
+.input-wrapper {
     /*width: 300px;*/
 }
 #input{
@@ -37,7 +41,7 @@ footer{
     padding: .3em;
     /*margin: 0 auto;*/
 }
-ul#config{
+ul#config {
     font-size: 0.8em;
     width: 90%;
     text-align: center;
@@ -45,12 +49,12 @@ ul#config{
     overflow: hidden;
     height: auto;
 }
-#config li{
+#config li {
     display: inline-block;
     /*float: left;*/
     padding: 0.3em 0.6em;
 }
-.input-textfield input{
+.input-textfield input {
     width: 5em;
     padding: 4px;
 }
@@ -60,13 +64,13 @@ input[type=checkbox] {
   transform: scale(1.5, 1.5);
   margin-right: 4px;
 }
-canvas{
+canvas {
     display: block;
     margin: 2.5em auto;
     box-shadow: 0px 2px 9px #A18F71;
     background: white;
 }
-#info{
+#info {
     background: #9C722F;
     width: 85%;
     padding: 1em;
@@ -74,18 +78,23 @@ canvas{
     border: 6px dotted #D7D4B5;
     font-size: inherit;
 }
-h3{
+.info-topic {
     border: 0 solid white;
     border-width: 0 0 2px 0;
     font-size: 0.9em;
+    padding: 0.3em;
 }
-#info ul{
+#info ul {
     padding: 0.5em;
     margin: 0 auto;
     width: 90%;
 }
-#info li{
+#info li {
     text-align: left;
     list-style: circle;
     font-size: 0.7em;
+    margin-bottom: 0.5em;
+}
+#info li:last-child {
+    margin-bottom: 0;
 }
