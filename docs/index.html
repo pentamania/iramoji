@@ -16,6 +16,7 @@
                 <h1 class="title">いらもじ</h1>
                 <!-- <img class="title" src="./asset/title.png" alt="いらもじ"/> -->
             </header>
+
             <ul id="config" class="input-control number">
                 <li class="input-textfield">
                     <label>サイズ倍率</label>
@@ -30,27 +31,26 @@
                     <label for="letter-vertical">縦書き</label>
                 </li>
             </ul>
+
             <div class="input-wrapper input-control big-input ">
                 <input id="input" type="text" value="いらもじ" placeholder="好きな言葉を入力"></input>
             </div>
+
             <canvas id="out-canvas"></canvas>
 
             <div id="out"></div>
 
-            <div id="info">
-            <h3>好きな文字列を<a href="http://www.irasutoya.com/" target="_blank">いらすとや</a>さんの書体画像に置き換えるアプリです。</h3>
-            <ul>
-                <li>出力された画像の利用については、<a href="http://www.irasutoya.com/p/terms.html" target="_blank">いらすとやさんの利用規約</a>に従って下さい。</li>
-                <li>対応文字：アルファベット、ひらがな、カタカナ、アラビア数字、一部記号。</li>
-                <li>非対応の文字は空白で代用されます。</li>
-                <li>Internet Explorer 8以下は動作対象外です。</li>
-                <li>当アプリに対するご意見等は<a href="http://pentamania.github.io/portal/" target="_blank">製作者：pentamania</a>まで</li>
-            </ul>
-            <br>
-
-            </div>
+            <section id="info">
+                <h3 class="info-topic">好きな文字列を<a href="http://www.irasutoya.com/" target="_blank">いらすとや</a>さんの書体画像に置き換えるアプリです。</h3>
+                <ul>
+                    <li>出力された画像の利用については、<a href="http://www.irasutoya.com/p/terms.html" target="_blank">いらすとやさんの利用規約</a>に従って下さい。</li>
+                    <li>対応文字：アルファベット、ひらがな、カタカナ、アラビア数字、一部記号。</li>
+                    <li>非対応の文字は空白で代用されます。</li>
+                    <li>Internet Explorer 8以下は動作対象外です。</li>
+                    <li>当アプリに対するご意見等は<a href="http://pentamania.github.io/portal/" target="_blank">pentamania</a>まで</li>
+                </ul>
+            </section>
         </main>
-        <!-- <footer>Made by pentamania</footer> -->
 
         <script src="./scripts/lib/promise.min.js" charset="utf-8"></script>
         <script src="./scripts/lib/xhr.js" charset="utf-8"></script>
